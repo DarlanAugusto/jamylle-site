@@ -118,9 +118,12 @@ p { margin: 0 0 1em; }
     position: fixed; top: var(--nav-h); left: 0; right: 0;
     flex-direction: column; gap: 6px; padding: 18px 16px 26px;
     background: var(--bg); box-shadow: var(--shadow);
-    transform: translateY(-120%); transition: transform .35s ease;
+    /* fechado: sobe a altura inteira + a barra, e some de vez (sem faixa no topo) */
+    transform: translateY(calc(-100% - var(--nav-h)));
+    visibility: hidden;
+    transition: transform .35s ease, visibility 0s .35s;
   }
-  .nav__links.is-open { transform: none; }
+  .nav__links.is-open { transform: none; visibility: visible; transition: transform .35s ease; }
   .nav__links a:not(.btn) { padding: 10px; font-size: 1.05rem; }
   .nav__links .btn { margin-top: 8px; width: 100%; padding: .9em; }
   .nav.menu-open { background: var(--bg); }
