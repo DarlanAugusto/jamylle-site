@@ -236,6 +236,18 @@
     if (e.target.open) $$(".faq details").forEach(d => { if (d !== e.target) d.open = false; });
   }, true);
 
+  /* ---------- Reflexo do vidro seguindo o cursor ---------- */
+  if (matchMedia("(hover: hover)").matches) {
+    const vidros = ".hero__badge, .service, .steps li, .testi__card blockquote, .faq details, .booking__form";
+    addEventListener("pointermove", e => {
+      const el = e.target.closest(vidros);
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      el.style.setProperty("--mx", `${((e.clientX - r.left) / r.width) * 100}%`);
+      el.style.setProperty("--my", `${((e.clientY - r.top) / r.height) * 100}%`);
+    }, { passive: true });
+  }
+
   /* ---------- Animação ao rolar ---------- */
   const io = new IntersectionObserver(entries => entries.forEach(en => {
     if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); }
