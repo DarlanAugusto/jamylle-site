@@ -4,7 +4,7 @@
 const SITE = {
   nome: "Jamylle Vitória",
   primeiroNome: "Jamylle",
-  titulo: "Manicure & Nail Designer",
+  titulo: "Manicure",
   cidade: "Araçatuba-SP",
   endereco: "Residencial Paquerê · Araçatuba-SP — atendimento em casa e a domicílio",
 
@@ -18,7 +18,7 @@ const SITE = {
     facebook: "",
   },
 
-  bio: "Sou apaixonada pelo universo das unhas e estou em formação profissional como manicure e nail designer. Atendo no Residencial Paquerê e também vou até você, em Araçatuba. Cada atendimento é feito com calma, atenção aos detalhes e todo o cuidado com a higiene, porque você merece se sentir linda e segura.",
+  bio: "Sou apaixonada pelo universo das unhas e estou em formação profissional como manicure. Atendo no Residencial Paquerê e também vou até você, em Araçatuba. Cada atendimento é feito com calma, atenção aos detalhes e todo o cuidado com a higiene, porque você merece se sentir linda e segura.",
 
   // Escassez honesta: mude ou deixe "" para esconder
   vagasTexto: "Agenda aberta",
