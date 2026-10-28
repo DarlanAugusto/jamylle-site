@@ -1,0 +1,4 @@
+# Site estático: não há build, publica a própria pasta
+[build]
+  publish = "."
+  command = ""
